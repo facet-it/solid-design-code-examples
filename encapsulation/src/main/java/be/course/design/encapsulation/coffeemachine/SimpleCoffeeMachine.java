@@ -7,8 +7,8 @@ public class SimpleCoffeeMachine {
     private int boilingTemperatureInCelcius = 100;
     
     //this is a coffee machine that works on electricity
-    private int incomingElectricalCurrentInVolt = 220;
-    private int electricalCurrentForBoiler = 120;
+    private int incomingElectricalVoltage = 220;
+    private final int boilerVoltage = 120;
     
     private int maximumVolumeOfCanInCentiliter = 150;
     //maybe even more details 
@@ -20,12 +20,14 @@ public class SimpleCoffeeMachine {
     
     private void boilWater(int volume) {
         while(getTemperatureOfWater(volume) < boilingTemperatureInCelcius) {
-            heat();
+            heatUp();
         }
     }
     
-    private void heat() {
-        transformElectricalCurrent();
+    private void heatUp() {
+        if(transformElectricalCurrent(incomingElectricalVoltage) > boilerVoltage) {
+            throw new RuntimeException("Voltage too high for this boiler");
+        }
         //Electrical current flows through the heating element and heats up the
         //water
     }
@@ -34,8 +36,9 @@ public class SimpleCoffeeMachine {
      * The heating element in this machine is an electrical one and it only works
      * on 120 volts.
      */
-    private void transformElectricalCurrent() {
+    private int transformElectricalCurrent(int incomingVol) {
         //a process to go from 220 volts to 120 volts
+        return 120;
     }
     
     private int getTemperatureOfWater(int volume) {
