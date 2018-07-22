@@ -1,24 +1,28 @@
 package be.course.design.encapsulation.coffeemachine;
 
 /**
- * A decent example of encapsulation
+ * No encapsulation at all :(
  */
-public class SimpleCoffeeMachine {
-    private int boilingTemperatureInCelcius = 100;
+public class BadCoffeeMachine {
+    
+    public int boilingTemperatureInCelcius = 100;
     
     //this is a coffee machine that works on electricity
-    private int incomingElectricalVoltage = 220;
-    private final int boilerVoltage = 120;
+    public int incomingElectricalVoltage = 220;
+    public final int boilerVoltage = 120;
     
-    private int maximumVolumeOfCanInCentiliter = 150;
+    public int maximumVolumeOfCanInCentiliter = 150;
     //maybe even more details 
     
     public Coffee makeCoffee(int amountOfCoffeePowder, int volumeOfWater) {
+        if(volumeOfWater > maximumVolumeOfCanInCentiliter) {
+            throw new IllegalArgumentException("The amount of water you added is higher then the current coffee can can handle!!!");
+        }
         boilWater(volumeOfWater);
         return infuse(amountOfCoffeePowder, volumeOfWater);
     }
     
-    private void boilWater(int volume) {
+    public void boilWater(int volume) {
         while(getTemperatureOfWater(volume) < boilingTemperatureInCelcius) {
             heatUp();
         }
@@ -51,4 +55,5 @@ public class SimpleCoffeeMachine {
         //the moment where the water turns into coffee by infusion
         return new Coffee(volumeOfBoilingWater);
     }
+
 }

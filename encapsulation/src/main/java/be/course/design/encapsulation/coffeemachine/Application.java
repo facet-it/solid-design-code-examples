@@ -1,9 +1,9 @@
 package be.course.design.encapsulation.coffeemachine;
 
-public class AppThatNeedsCoffee {
+public class Application {
     
     public static void main(String[] arguments) {
-        SimpleCoffeeMachine machine = new SimpleCoffeeMachine();
+        InstantCoffeeMachine machine = new InstantCoffeeMachine();
         Coffee coffee = machine.makeCoffee(120, 100);
     } 
 }
