@@ -1,5 +1,6 @@
-package be.course.design.encapsulation.coffeemachine;
+package be.course.design.encapsulation.coffeemachine.good;
 
+import be.course.design.encapsulation.coffeemachine.Coffee;
 import java.util.Random;
 
 /**
@@ -22,6 +23,7 @@ public class InstantCoffeeMachine {
     private int maximumVolumeOfCanInCentiliter = 150;
     
     public Coffee makeCoffee(int amountOfCoffeePowder, int volumeOfWater) {
+        System.out.println("- Making a coffee ... -");
         if(volumeOfWater > maximumVolumeOfCanInCentiliter) {
             throw new IllegalArgumentException("The amount of water you added is higher then the current coffee can can handle!!!");
         }
@@ -33,7 +35,16 @@ public class InstantCoffeeMachine {
         return infuse(amountOfCoffeePowder, volumeOfWater);
     }
     
-    private void boilWater(int volume) {
+    public void boilWater(int volume) {
+        if(currentVoltage > boilerVoltage) {
+            throw new RuntimeException("To high voltage! Boiler broke");
+        }
+        
+        if(currentVoltage < boilerVoltage - 10) {
+            throw new RuntimeException("To low voltage! Boiling water will take forever");
+        }
+        
+        System.out.println("- ...Boiling water... -");
         this.currentWaterTemperatureInCelcius = getInitialWaterTemperature(volume);
         while(currentWaterTemperatureInCelcius < boilingTemperatureInCelcius) {
             heatUp();
@@ -50,7 +61,7 @@ public class InstantCoffeeMachine {
     
     private void heatUp() {  
         try{
-            Thread.sleep(1000);
+            Thread.sleep(100);
         }
         catch(InterruptedException ie) {
             throw new RuntimeException("Something went very wrong when heating up the water!");
@@ -65,14 +76,14 @@ public class InstantCoffeeMachine {
     
     //This is where you slowly pour the boiling water over the coffee powder
     private Coffee infuse(int amountOfPowder, int volumeOfBoilingWater) {
-        System.out.println("infusing....");
+        System.out.println("- ...infusing.... -");
         try{
             Thread.sleep(1000);
         }
         catch(InterruptedException ie) {
             throw new RuntimeException("Something went very wrong when infusing the coffee tast in the water!");
         }
-        System.out.println("enjoy your coffee");
+        System.out.println("- coffee ready -");
         return new Coffee(volumeOfBoilingWater);
     }
 }
