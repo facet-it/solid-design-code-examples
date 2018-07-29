@@ -15,21 +15,9 @@ public class BadCoffeeMachine {
     public int netVoltage = 220;
     public int currentVoltage = 0;
     public final int boilerVoltage = 120;
+    public boolean isOn = false;
     
     public int maximumVolumeOfCanInCentiliter = 150;
-    
-    public Coffee makeCoffee(int amountOfCoffeePowder, int volumeOfWater) {
-        System.out.println("- Making a coffee ... -");
-        if(volumeOfWater > maximumVolumeOfCanInCentiliter) {
-            throw new IllegalArgumentException("The amount of water you added is higher then the current coffee can can handle!!!");
-        }
-        
-        transformElectricalCurrent();
-        
-        boilWater(volumeOfWater);
-        currentVoltage = 0;
-        return infuse(amountOfCoffeePowder, volumeOfWater);
-    }
     
     public void boilWater(int volume) {
         if(currentVoltage > boilerVoltage) {
@@ -70,6 +58,25 @@ public class BadCoffeeMachine {
         currentVoltage = netVoltage - 100;
     }
     
+    public void turnOn() {
+        if(!isOn) {
+            this.currentVoltage = netVoltage;
+            transformElectricalCurrent();
+        }
+        else {
+            System.out.println("Can't turn on, the machine is already on");
+        }
+    }
+    
+    public void turnOff() {
+        if(isOn) {
+            this.currentVoltage = 0;
+        }
+        else{
+            System.out.println("Can't turn off, the machine is not turned on");
+        }
+    }
+    
     //This is where you slowly pour the boiling water over the coffee powder
     public Coffee infuse(int amountOfPowder, int volumeOfBoilingWater) {
         System.out.println("infusing....");
@@ -79,8 +86,10 @@ public class BadCoffeeMachine {
         catch(InterruptedException ie) {
             throw new RuntimeException("Something went very wrong when infusing the coffee tast in the water!");
         }
+        if(volumeOfBoilingWater > maximumVolumeOfCanInCentiliter) {
+            throw new RuntimeException("Too much boiling water! This machine can currently handle " + maximumVolumeOfCanInCentiliter + " mililiters of water");
+        }
         System.out.println("enjoy your coffee");
         return new Coffee(volumeOfBoilingWater);
     }
-
 }

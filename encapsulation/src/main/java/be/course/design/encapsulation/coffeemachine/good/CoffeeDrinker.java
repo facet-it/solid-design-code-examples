@@ -8,7 +8,9 @@ public class CoffeeDrinker {
     
     public void needsACoffee(InstantCoffeeMachine coffeeMachine) {
         System.out.println("Getting myself some nice coffee...");
+        coffeeMachine.turnOn();
         coffeeMachine.makeCoffee(150, 150);
+        coffeeMachine.turnOff();
         System.out.println("Ooh yeah!");
     }
 

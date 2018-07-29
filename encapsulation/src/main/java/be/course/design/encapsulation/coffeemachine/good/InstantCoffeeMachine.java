@@ -21,21 +21,18 @@ public class InstantCoffeeMachine {
     private final int boilerVoltage = 120;
     
     private int maximumVolumeOfCanInCentiliter = 150;
+    private boolean isOn = false;
     
     public Coffee makeCoffee(int amountOfCoffeePowder, int volumeOfWater) {
         System.out.println("- Making a coffee ... -");
         if(volumeOfWater > maximumVolumeOfCanInCentiliter) {
             throw new IllegalArgumentException("The amount of water you added is higher then the current coffee can can handle!!!");
         }
-        
-        transformElectricalCurrent();
-        
         boilWater(volumeOfWater);
-        currentVoltage = 0;
         return infuse(amountOfCoffeePowder, volumeOfWater);
     }
     
-    public void boilWater(int volume) {
+    private void boilWater(int volume) {
         if(currentVoltage > boilerVoltage) {
             throw new RuntimeException("To high voltage! Boiler broke");
         }
@@ -85,5 +82,24 @@ public class InstantCoffeeMachine {
         }
         System.out.println("- coffee ready -");
         return new Coffee(volumeOfBoilingWater);
+    }
+    
+    public void turnOn() {
+        if(!isOn) {
+            this.currentVoltage = netVoltage;
+            transformElectricalCurrent();
+        }
+        else {
+            System.out.println("Can't turn on, the machine is already on");
+        }
+    }
+    
+    public void turnOff() {
+        if(isOn) {
+            this.currentVoltage = 0;
+        }
+        else{
+            System.out.println("Can't turn off, the machine is not turned on");
+        }
     }
 }
