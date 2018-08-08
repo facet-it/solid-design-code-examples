@@ -1,4 +1,4 @@
-package be.course.design.polymorphism;
+package be.course.design.polymorphism.runtimepolymorphism;
 
 public class DutchGreeter implements Greeter{
 
