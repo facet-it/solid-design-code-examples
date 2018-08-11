@@ -1,4 +1,4 @@
-package be.course.design.polymorphism.goodexample;
+package be.course.design.polymorphism.badexample;
 
 import java.util.List;
 
@@ -7,13 +7,12 @@ import java.util.List;
  * everything is 21% vat rated, except foreign products, those are only 12% vat. 
  * Foreign services are free from vat.
  */
-public class BelgianVatCalculator implements VatCalculator{
+public class BelgianVatCalculator {
     
     private final int normalVat = 21;
     private final int foreignProductVat = 12;
-
-    @Override
-    public double calculate(List<Product> products) {
+    
+    public double doBelgianVatCalculationsOnList(List<Product> products) {
         double endResult = 0;
         
         for(Product product : products) {

@@ -14,7 +14,7 @@ import java.util.List;
  * clientside can be sure that when dealing with an object of type "VatCalculator", 
  * there will be a method "calculate()" that needs a list of products.
  */
-public interface VatCalculator {
+interface VatCalculator {
     
     double calculate(List<Product> products);
     
