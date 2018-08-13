@@ -9,5 +9,4 @@ public class AsianVatCalculator {
         //some complex calculation logic based on the country of origin
         return 0;
     }
-
 }
