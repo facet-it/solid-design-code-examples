@@ -1,16 +1,21 @@
 package be.course.design.srp.opendataproject.bad;
 
-public class PopulationStatisticsLine {
-    private Integer refnisCodeGemeente;
+import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
+
+@XmlRootElement(name = "line")
+public class PopulationStatisticsLineToXml {
+    
+    private String refnisCodeGemeente;
     private String naamGemeenteNl;
     private String naamGemeenteFr;
-    private Integer refnisCodeArrondissement;
+    private String refnisCodeArrondissement;
     private String naamArrondissementNl;
     private String naamArrondissementFr;
-    private Integer refnisCodeProvincie;
+    private String refnisCodeProvincie;
     private String naamProvincieNl;
     private String naamProvincieFr;
-    private Integer refnisCodeGewest;
+    private String refnisCodeGewest;
     private String naamGewestNl;
     private String naamGewestFr;
     private String geslacht;
@@ -24,11 +29,12 @@ public class PopulationStatisticsLine {
     private Integer aantal;
     private String jaartal;
 
-    public Integer getRefnisCodeGemeente() {
+    public String getRefnisCodeGemeente() {
         return refnisCodeGemeente;
     }
 
-    public void setRefnisCodeGemeente(Integer refnisCodeGemeente) {
+    @XmlElement(name = "refnisGemeente")
+    public void setRefnisCodeGemeente(String refnisCodeGemeente) {
         this.refnisCodeGemeente = refnisCodeGemeente;
     }
 
@@ -36,6 +42,7 @@ public class PopulationStatisticsLine {
         return naamGemeenteNl;
     }
 
+    @XmlElement(name = "naamGemeenteNl")
     public void setNaamGemeenteNl(String naamGemeenteNl) {
         this.naamGemeenteNl = naamGemeenteNl;
     }
@@ -44,15 +51,17 @@ public class PopulationStatisticsLine {
         return naamGemeenteFr;
     }
 
+    @XmlElement(name = "naamGemeenteFr")
     public void setNaamGemeenteFr(String naamGemeenteFr) {
         this.naamGemeenteFr = naamGemeenteFr;
     }
 
-    public Integer getRefnisCodeArrondissement() {
+    public String getRefnisCodeArrondissement() {
         return refnisCodeArrondissement;
     }
 
-    public void setRefnisCodeArrondissement(Integer refnisCodeArrondissement) {
+    @XmlElement(name = "refnisArrondissement")
+    public void setRefnisCodeArrondissement(String refnisCodeArrondissement) {
         this.refnisCodeArrondissement = refnisCodeArrondissement;
     }
 
@@ -60,6 +69,7 @@ public class PopulationStatisticsLine {
         return naamArrondissementNl;
     }
 
+    @XmlElement(name = "naamArrondissementNl")
     public void setNaamArrondissementNl(String naamArrondissementNl) {
         this.naamArrondissementNl = naamArrondissementNl;
     }
@@ -68,15 +78,17 @@ public class PopulationStatisticsLine {
         return naamArrondissementFr;
     }
 
+    @XmlElement(name = "naamArrondissementFr")
     public void setNaamArrondissementFr(String naamArrondissementFr) {
         this.naamArrondissementFr = naamArrondissementFr;
     }
 
-    public Integer getRefnisCodeProvincie() {
+    public String getRefnisCodeProvincie() {
         return refnisCodeProvincie;
     }
 
-    public void setRefnisCodeProvincie(Integer refnisCodeProvincie) {
+    @XmlElement(name = "refnisProvincie")
+    public void setRefnisCodeProvincie(String refnisCodeProvincie) {
         this.refnisCodeProvincie = refnisCodeProvincie;
     }
 
@@ -84,6 +96,7 @@ public class PopulationStatisticsLine {
         return naamProvincieNl;
     }
 
+    @XmlElement(name = "naamProvincieNl")
     public void setNaamProvincieNl(String naamProvincieNl) {
         this.naamProvincieNl = naamProvincieNl;
     }
@@ -92,15 +105,17 @@ public class PopulationStatisticsLine {
         return naamProvincieFr;
     }
 
+    @XmlElement(name = "naamProvincieFr")
     public void setNaamProvincieFr(String naamProvincieFr) {
         this.naamProvincieFr = naamProvincieFr;
     }
 
-    public Integer getRefnisCodeGewest() {
+    public String getRefnisCodeGewest() {
         return refnisCodeGewest;
     }
 
-    public void setRefnisCodeGewest(Integer refnisCodeGewest) {
+    @XmlElement(name = "refnisGewest")
+    public void setRefnisCodeGewest(String refnisCodeGewest) {
         this.refnisCodeGewest = refnisCodeGewest;
     }
 
@@ -108,6 +123,7 @@ public class PopulationStatisticsLine {
         return naamGewestNl;
     }
 
+    @XmlElement(name = "naamGewestNl")
     public void setNaamGewestNl(String naamGewestNl) {
         this.naamGewestNl = naamGewestNl;
     }
@@ -116,6 +132,7 @@ public class PopulationStatisticsLine {
         return naamGewestFr;
     }
 
+    @XmlElement(name = "naamGewestFr")
     public void setNaamGewestFr(String naamGewestFr) {
         this.naamGewestFr = naamGewestFr;
     }
@@ -124,6 +141,7 @@ public class PopulationStatisticsLine {
         return geslacht;
     }
 
+    @XmlElement(name = "geslacht")
     public void setGeslacht(String geslacht) {
         this.geslacht = geslacht;
     }
@@ -132,6 +150,7 @@ public class PopulationStatisticsLine {
         return nationaliteitsCode;
     }
 
+    @XmlElement(name = "codeNationaliteit")
     public void setNationaliteitsCode(String nationaliteitsCode) {
         this.nationaliteitsCode = nationaliteitsCode;
     }
@@ -140,6 +159,7 @@ public class PopulationStatisticsLine {
         return nationaliteitNl;
     }
 
+    @XmlElement(name = "nationaliteitNl")
     public void setNationaliteitNl(String nationaliteitNl) {
         this.nationaliteitNl = nationaliteitNl;
     }
@@ -148,6 +168,7 @@ public class PopulationStatisticsLine {
         return nationaliteitFr;
     }
 
+    @XmlElement(name = "nationaliteitFr")
     public void setNationaliteitFr(String nationaliteitFr) {
         this.nationaliteitFr = nationaliteitFr;
     }
@@ -156,6 +177,7 @@ public class PopulationStatisticsLine {
         return codeBurgerlijkeStaat;
     }
 
+    @XmlElement(name = "codeBurgerlijkeStaat")
     public void setCodeBurgerlijkeStaat(String codeBurgerlijkeStaat) {
         this.codeBurgerlijkeStaat = codeBurgerlijkeStaat;
     }
@@ -164,6 +186,7 @@ public class PopulationStatisticsLine {
         return burgerlijkeStaatNl;
     }
 
+    @XmlElement(name = "burgerlijkeStaatNl")
     public void setBurgerlijkeStaatNl(String burgerlijkeStaatNl) {
         this.burgerlijkeStaatNl = burgerlijkeStaatNl;
     }
@@ -172,6 +195,7 @@ public class PopulationStatisticsLine {
         return burgerlijkeStaatFr;
     }
 
+    @XmlElement(name = "burgerlijkeStaatFr")
     public void setBurgerlijkeStaatFr(String burgerlijkeStaatFr) {
         this.burgerlijkeStaatFr = burgerlijkeStaatFr;
     }
@@ -180,6 +204,7 @@ public class PopulationStatisticsLine {
         return leeftijd;
     }
 
+    @XmlElement(name = "leeftijd")
     public void setLeeftijd(Integer leeftijd) {
         this.leeftijd = leeftijd;
     }
@@ -188,6 +213,7 @@ public class PopulationStatisticsLine {
         return aantal;
     }
 
+    @XmlElement(name = "aantal")
     public void setAantal(Integer aantal) {
         this.aantal = aantal;
     }
@@ -196,7 +222,9 @@ public class PopulationStatisticsLine {
         return jaartal;
     }
 
+    @XmlElement(name = "jaartal")
     public void setJaartal(String jaartal) {
         this.jaartal = jaartal;
-    } 
+    }
+
 }
