@@ -1,6 +1,5 @@
 package be.course.design.srp.opendataproject.bad;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -9,9 +8,6 @@ import java.util.List;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
-import javax.xml.bind.JAXBContext;
-import javax.xml.bind.JAXBException;
-import javax.xml.bind.Marshaller;
 
 public class DataFileReader {
     private static String UNKNOWN_CODE_ON_FIELD = "Onbekende veld - code combinatie: ";
@@ -42,7 +38,8 @@ public class DataFileReader {
         try{
             line.setRefnisCodeGemeente(Integer.parseInt(tokens[0]));
             if(line.getRefnisCodeGemeente() > 100000) {
-                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "gemeente - " + line.getRefnisCodeGemeente(), line));
+                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "gemeente - " 
+                        + line.getRefnisCodeGemeente(), line));
             }
         }
         catch(NumberFormatException nfe) {
@@ -55,7 +52,8 @@ public class DataFileReader {
         try{
             line.setRefnisCodeArrondissement(Integer.parseInt(tokens[3]));
             if(line.getRefnisCodeArrondissement()> 100000) {
-                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "arrondissement - " + line.getRefnisCodeArrondissement(), line));
+                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "arrondissement - " 
+                        + line.getRefnisCodeArrondissement(), line));
             }
         }
         catch(NumberFormatException nfe) {
@@ -68,7 +66,8 @@ public class DataFileReader {
         try{
             line.setRefnisCodeProvincie(Integer.parseInt(tokens[6]));
             if(line.getRefnisCodeArrondissement()> 100000) {
-                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "provincie - " + line.getRefnisCodeProvincie(), line));
+                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "provincie - " 
+                        + line.getRefnisCodeProvincie(), line));
             }
         }
         catch(NumberFormatException nfe) {
@@ -81,7 +80,8 @@ public class DataFileReader {
         try{
             line.setRefnisCodeGewest(Integer.parseInt(tokens[9]));
             if(line.getRefnisCodeArrondissement()> 100000) {
-                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "gewest - " + line.getRefnisCodeGewest(), line));
+                errorLines.add(new LineError(UNKNOWN_CODE_ON_FIELD + "gewest - " 
+                        + line.getRefnisCodeGewest(), line));
             }
         }
         catch(NumberFormatException nfe) {
@@ -91,7 +91,8 @@ public class DataFileReader {
         line.setNaamGewestNl(tokens[10]);
         line.setNaamGewestFr(tokens[11]);
         line.setGeslacht(tokens[12]);
-        if(! line.getGeslacht().toLowerCase().equals("m") || !line.getGeslacht().toLowerCase().equals("f")) {
+        if(! line.getGeslacht().toLowerCase().equals("m") || 
+                !line.getGeslacht().toLowerCase().equals("f")) {
             errorLines.add(new LineError(UNKNOW_SEX_CODE, line));
         }
         
@@ -122,20 +123,13 @@ public class DataFileReader {
 
         return line;
     }
-
-    private void createXmlFile(XmlDataFile file) {
-        try {
-            File targetFile = Paths.get("C:\\workspace\\datasets\\pop-residence-nationality", "datafile.xml").toFile();
-            JAXBContext jaxbContext = JAXBContext.newInstance(XmlDataFile.class);
-            Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
-
-            // output pretty printed
-            jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
-            jaxbMarshaller.setProperty(Marshaller.JAXB_ENCODING, "ISO-8859-1");
-            jaxbMarshaller.marshal(file, targetFile);
-
-        } catch (JAXBException e) {
-            e.printStackTrace();
-        }
+    
+    public void simpleReport() {
+        System.out.println("The amount of errors in this file: " + this.errorLines.size());
+        System.out.println("----------------------------------------------------------------");
+        
+        errorLines.stream().forEach(line -> {System.out.println(line.getError()); 
+                                             System.out.println("-----------");
+        });
     }
 }

@@ -6,6 +6,7 @@ public class App {
         DataFileReader reader = new DataFileReader();
         
         reader.readFile("C:\\workspace\\datasets\\pop-residence-nationality\\TEST.csv");
+        reader.simpleReport();
     }
     
 }
