@@ -1,5 +1,6 @@
 package be.course.design.srp.opendataproject.person;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -25,7 +26,7 @@ public class Person {
                 toJson.append("dateOfBirth", dateOfBirth.toString());
                 toJson.append("gender", gender);
                 
-                try(FileWriter writer = new FileWriter(export)){
+                try(BufferedWriter writer = new BufferedWriter(new FileWriter(export.getName()))){
                     writer.append(toJson.toString());
                 }
                 catch(IOException ioe) {
@@ -36,7 +37,7 @@ public class Person {
             default:
                 String csvLine = firstName + DELIMITER + lastName + DELIMITER + 
                         dateOfBirth.toString() + DELIMITER + gender;
-                try(FileWriter writer = new FileWriter(export)){
+                try(BufferedWriter writer = new BufferedWriter(new FileWriter(export.getName()))){
                     writer.append(csvLine);
                 }
                 catch(IOException ioe) {
