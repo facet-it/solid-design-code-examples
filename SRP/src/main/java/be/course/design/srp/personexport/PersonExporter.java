@@ -1,4 +1,4 @@
-package be.course.design.srp.opendataproject.person;
+package be.course.design.srp.personexport;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -7,7 +7,6 @@ import java.nio.file.Paths;
 import org.json.JSONObject;
 
 public class PersonExporter {
-
     private final String DELIMITER = ",";
 
     public void export(PersonSeparated person, String format, String location) {

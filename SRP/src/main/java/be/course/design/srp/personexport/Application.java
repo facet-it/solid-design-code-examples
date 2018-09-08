@@ -1,4 +1,4 @@
-package be.course.design.srp.opendataproject.person;
+package be.course.design.srp.personexport;
 
 public class Application {
     

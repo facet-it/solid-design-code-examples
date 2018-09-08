@@ -1,4 +1,4 @@
-package be.course.design.srp.opendataproject.person;
+package be.course.design.srp.personexport;
 
 import java.io.BufferedReader;
 import java.io.IOException;

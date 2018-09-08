@@ -1,4 +1,4 @@
-package be.course.design.srp.opendataproject.person;
+package be.course.design.srp.personexport;
 
 import java.io.BufferedWriter;
 import java.io.File;
@@ -9,40 +9,41 @@ import java.time.LocalDate;
 import org.json.JSONObject;
 
 public class Person {
+
     private final String DELIMITER = ",";
-    
+
     public String firstName;
-    public String lastName; 
+    public String lastName;
     public LocalDate dateOfBirth;
     public String gender;
-  
+    public boolean wouldWorkHere;
+
     public void export(String format, String location) {
         File export = Paths.get(location).toFile();
-        switch(format) {
+        switch (format) {
             case "json":
                 JSONObject toJson = new JSONObject();
                 toJson.append("firstname", firstName);
                 toJson.append("lastname", lastName);
                 toJson.append("dateOfBirth", dateOfBirth.toString());
                 toJson.append("gender", gender);
-                
-                try(BufferedWriter writer = new BufferedWriter(new FileWriter(export.getName()))){
+                toJson.append("would work here", wouldWorkHere);
+
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(export.getName()))) {
                     writer.append(toJson.toString());
-                }
-                catch(IOException ioe) {
-                    System.out.println("Problem writing cvs file: " + ioe.getMessage());
+                } catch (IOException ioe) {
+                    System.out.println("Problem writing json file: " + ioe.getMessage());
                 }
                 break;
-                
+
             default:
-                String csvLine = firstName + DELIMITER + lastName + DELIMITER + 
-                        dateOfBirth.toString() + DELIMITER + gender;
-                try(BufferedWriter writer = new BufferedWriter(new FileWriter(export.getName()))){
+                String csvLine = firstName + DELIMITER + lastName + DELIMITER
+                        + dateOfBirth.toString() + DELIMITER + gender + DELIMITER + wouldWorkHere;
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(export.getName()))) {
                     writer.append(csvLine);
-                }
-                catch(IOException ioe) {
+                } catch (IOException ioe) {
                     System.out.println("Problem writing cvs file: " + ioe.getMessage());
-                }  
+                }
         }
     }
 }

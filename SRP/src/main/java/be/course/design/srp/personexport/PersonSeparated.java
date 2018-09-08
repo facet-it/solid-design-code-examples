@@ -1,4 +1,4 @@
-package be.course.design.srp.opendataproject.person;
+package be.course.design.srp.personexport;
 
 import java.time.LocalDate;
 
@@ -7,6 +7,7 @@ public class PersonSeparated {
     private String lastName; 
     private LocalDate dateOfBirth;
     private String gender;
+    private boolean wouldWorkHere;
     private String reasonForVisit;
     private String emailAddress;
 
@@ -56,5 +57,13 @@ public class PersonSeparated {
 
     public void setEmailAddress(String emailAddress) {
         this.emailAddress = emailAddress;
+    }
+
+    public boolean isWouldWorkHere() {
+        return wouldWorkHere;
+    }
+
+    public void setWouldWorkHere(boolean wouldWorkHere) {
+        this.wouldWorkHere = wouldWorkHere;
     }
 }

@@ -1,4 +1,4 @@
-package be.course.design.srp.opendataproject.person;
+package be.course.design.srp.personexport;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,15 +6,10 @@ import java.io.InputStreamReader;
 import java.time.LocalDate;
 
 public class ManuelPersonInput {
-
-    private final String DONE = "done";
-    private final String QUIT = "quit";
-    private final String REDO = "redo";
-
+    
     public void startInput() {
         try (BufferedReader inputReader = new BufferedReader(new InputStreamReader(System.in))) {
-            Person person = null;
-            person = new Person();
+            Person person = new Person();
             System.out.println("Please fill in person data");
             System.out.println("ENTER FIRSTNAME: ");
             person.firstName = inputReader.readLine();
@@ -31,8 +26,17 @@ public class ManuelPersonInput {
 
             System.out.println("ENTER GENDER (m OR v)");
             person.gender = inputReader.readLine();
+            
+            System.out.println("CAN YOU SEE YOURSELF WORKING HERE? (Y/N)");
+            String working = inputReader.readLine();
+            if(working.toLowerCase().equals("y")) {
+                person.wouldWorkHere = true;
+            }
+            else {
+                person.wouldWorkHere = false;
+            }
 
-            person.export("normal", person.firstName + ".txt");
+            person.export("json", person.firstName + ".json");
         } catch (IOException ioe) {
             System.out.println("Something went wrong during input: " + ioe.getMessage());
         }
