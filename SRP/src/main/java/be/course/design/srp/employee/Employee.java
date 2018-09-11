@@ -1,11 +1,15 @@
 package be.course.design.srp.employee;
 
+import java.io.File;
+import java.nio.file.Paths;
 import java.time.LocalDate;
 
 public class Employee {
 
     private String firstname;
     private String lastname;
+    private String address;
+    private String jobTitle;
     private int hoursWorkedThisWeek;
     private int hoursWorkedThisMonth;
     private final PayGrade paygrade;
@@ -24,7 +28,13 @@ public class Employee {
     }
 
     public void saveEmployee() {
-
+        //save to file
+        File export = Paths.get("employees.txt").toFile();
+        String DELIMITER = ",";
+        StringBuilder entry = new StringBuilder(firstname).append(DELIMITER);
+        entry.append(lastname).append(DELIMITER);
+        entry.append(jobTitle).append(DELIMITER);
+        entry.append(address).append(DELIMITER);
     }
 
     public String reportHours() {
@@ -44,6 +54,22 @@ public class Employee {
         hoursReport.append("from which are extra hours: ").
                 append((monthOverHours < 0 ? 0 : monthOverHours)).append("\n");
         return hoursReport.toString();
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public void setJobTitle(String jobTitle) {
+        this.jobTitle = jobTitle;
     }
 
     public String getFirstname() {
