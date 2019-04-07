@@ -52,7 +52,8 @@ public class DirectoryPollingComponent {
     }
 
     public void start() {
-        System.out.println("start polling on directory " + toProcessDirectory.toAbsolutePath().toString());
+        System.out.println("start polling on directory " +
+                           toProcessDirectory.toAbsolutePath().toString());
         while(true) {
             File[] filesInDirectory = toProcessDirectory.toFile().listFiles();
             if(filesInDirectory.length == 0) {
@@ -67,7 +68,8 @@ public class DirectoryPollingComponent {
                 int amountOfFiles = filesInDirectory.length;
                 while(amountOfFiles != 0) {
                     System.out.println(filesInDirectory[0].getAbsolutePath());
-                    validationComponent.validateFile(DataFileType.SALES, Paths.get(filesInDirectory[0].getAbsolutePath()));
+                    validationComponent.validateFile(DataFileType.SALES,
+                                                     Paths.get(filesInDirectory[0].getAbsolutePath()));
                 }
             }
         }

@@ -1,7 +1,17 @@
 package be.course.design.encapsulation.filecheck;
 
 public enum DataFileType {
-    SALES,
-    CLIENTS,
-    PRODUCTS;
+    SALES("sales.txt"),
+    CUSTOMERS("customers.txt"),
+    PRODUCTS("products.txt");
+
+    private String headerFileName;
+
+    private DataFileType(String headerfileName) {
+        this.headerFileName = headerfileName;
+    }
+
+    public String getHeaderFileName() {
+        return this.headerFileName;
+    }
 }
