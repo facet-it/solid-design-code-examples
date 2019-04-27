@@ -68,8 +68,11 @@ public class DirectoryPollingComponent {
                 int amountOfFiles = filesInDirectory.length;
                 while(amountOfFiles != 0) {
                     System.out.println(filesInDirectory[0].getAbsolutePath());
-                    validationComponent.validateFile(DataFileType.SALES,
-                                                     Paths.get(filesInDirectory[0].getAbsolutePath()));
+                    //how do we know this file type?
+                    validationComponent = new ValidationComponent(DataFileType.SALES,
+                                                                  Paths.get(filesInDirectory[0].getAbsolutePath()),
+                                                                  ";");
+                    validationComponent.validateFile();
                 }
             }
         }
