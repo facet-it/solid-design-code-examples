@@ -33,9 +33,9 @@ import java.nio.file.Paths;
  */
 public class DirectoryPollingComponent {
 
-    private int intervalInMillis = 3000;
-    private Path toProcessDirectory;
-    private FileValidation validationComponent;
+    private final int intervalInMillis = 3000;
+    private final Path toProcessDirectory;
+    private ValidationComponent validationComponent;
 
 
     /**
@@ -45,7 +45,6 @@ public class DirectoryPollingComponent {
      *
      * We have an immediate hard decision to make here: what if the directory does not exist? Are we really going to
      * throw exceptions in a constructor? We decide to validate this before it is passed to the constuctor.
-     * @param toProcessDirectory
      */
     public DirectoryPollingComponent(String toProcessDirectory) {
         this.toProcessDirectory = Paths.get(toProcessDirectory);
@@ -54,25 +53,22 @@ public class DirectoryPollingComponent {
     public void start() {
         System.out.println("start polling on directory " +
                            toProcessDirectory.toAbsolutePath().toString());
-        while(true) {
+        while (true) {
             File[] filesInDirectory = toProcessDirectory.toFile().listFiles();
-            if(filesInDirectory.length == 0) {
+            if (filesInDirectory.length == 0) {
                 try {
                     Thread.sleep(intervalInMillis);
-                }
-                catch(InterruptedException ie) {
+                } catch (InterruptedException ie) {
                     System.out.println("Thread got interrupted.");
                 }
-            }
-            else {
+            } else {
                 int amountOfFiles = filesInDirectory.length;
-                while(amountOfFiles != 0) {
+                while (amountOfFiles != 0) {
                     System.out.println(filesInDirectory[0].getAbsolutePath());
                     //how do we know this file type?
-                    validationComponent = new ValidationComponent(DataFileType.SALES,
-                                                                  Paths.get(filesInDirectory[0].getAbsolutePath()),
+                    validationComponent = new ValidationComponent(Paths.get(filesInDirectory[0].getAbsolutePath()),
                                                                   ";");
-                    validationComponent.validateFile();
+                    validationComponent.checkFile();
                 }
             }
         }

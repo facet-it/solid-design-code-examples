@@ -82,11 +82,11 @@ import java.util.Map;
  * the header file? All of these methods are private. It seems like encapsulation can make your class hard
  * to test!!
  */
-public class ValidationComponent implements FileValidation {
+public class ValidationComponent {
 
-    private Path processDirectory = Paths.get("/workspace/test/filevalidation/processing");
-    private Path headerFiles = Paths.get("/workspace/test/filevalidation/headerfiles");
-    private Path translationFiles = Paths.get("/workspace/test/filevalidation/translationfiles");
+    private Path processDirectory = Paths.get("/filevalidation/processing");
+    private Path headerFiles = Paths.get("/filevalidation/headerfiles");
+    private Path translationFiles = Paths.get("/filevalidation/translationfiles");
     private Path fileToProcess;
     private String delimiter;
     private List<String> errors = new LinkedList<>();
@@ -97,19 +97,28 @@ public class ValidationComponent implements FileValidation {
     private String[] currentHeaders;
     private Map<String, Map<String, String>> currentTranslations;
 
-    public ValidationComponent(DataFileType type, Path dataFileToValidate, String delimiter) {
+    public ValidationComponent(Path dataFileToValidate, String delimiter) {
         this.delimiter = delimiter;
-        this.type = type;
         this.fileToProcess = dataFileToValidate;
     }
 
-    @Override
     public List<String> checkFile() {
+        determineType();
         Path dataFileInProcessing = copyDataFileToProcessDirectory();
         this.currentHeaders = readHeaders();
         this.currentTranslations = readTranslationFiles();
         processFile(dataFileInProcessing);
         return this.errors;
+    }
+
+    private void determineType() {
+        if (fileToProcess.toString().contains("-Sales")) {
+            this.type = DataFileType.SALES;
+        } else if (fileToProcess.toString().contains("-Customers")) {
+            this.type = DataFileType.CUSTOMERS;
+        } else if (fileToProcess.toString().contains("-Products")) {
+            this.type = DataFileType.PRODUCTS;
+        }
     }
 
     private Path copyDataFileToProcessDirectory() {
