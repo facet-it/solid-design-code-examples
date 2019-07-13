@@ -16,7 +16,7 @@ public enum OrderStatus {
 
     public static OrderStatus forIndex(int index) {
         for(OrderStatus status : OrderStatus.values()) {
-            if(status.index ==  index) {
+            if(status.index == index) {
                 return status;
             }
         }

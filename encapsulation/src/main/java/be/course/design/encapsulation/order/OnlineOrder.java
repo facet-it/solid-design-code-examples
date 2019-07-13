@@ -1,5 +1,8 @@
 package be.course.design.encapsulation.order;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class OnlineOrder {
 
     private double[] currentLocation;
@@ -7,13 +10,17 @@ public class OnlineOrder {
     private OrderStatus currentStatus = OrderStatus.NEW;
     private String orderId;
 
-    public OnlineOrder(double[] storageLocation, String orderId) {
-        this.currentLocation = storageLocation;
+    public OnlineOrder(double latitude, double longitude, String orderId) {
+        this.currentLocation = new double[] {latitude, longitude};
         this.orderId = orderId;
     }
 
-    public double[] getCurrentLocation() {
-        return currentLocation;
+    public Map<String, Double> getCurrentLocation() {
+        Map<String, Double> coordinates = new HashMap<>();
+        coordinates.put("latitude", currentLocation[0]);
+        coordinates.put("longitude", currentLocation[1]);
+
+        return coordinates;
     }
 
     public OrderStatus getCurrentStatus() {
@@ -22,6 +29,10 @@ public class OnlineOrder {
 
     public String getOrderId() {
         return orderId;
+    }
+
+    public void setCurrentLocation(double latitude, double longitude) {
+        this.currentLocation = new double[]{latitude, longitude};
     }
 
     public void bumpStatus() {
@@ -34,9 +45,5 @@ public class OnlineOrder {
         if(currentStatus != OrderStatus.NEW) {
             currentStatus = OrderStatus.forIndex(currentStatus.getIndex() - 1);
         }
-    }
-
-    public void setCurrentLocation(double[] location) {
-        this.currentLocation = location;
     }
 }
