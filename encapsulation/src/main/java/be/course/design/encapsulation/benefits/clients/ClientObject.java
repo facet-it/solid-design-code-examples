@@ -13,12 +13,17 @@ import be.course.design.encapsulation.benefits.ValidationService;
 public class ClientObject {
 
     /**
-     * In this client class, I want to do validate datafiles.
-     * @param args
+     * In this client class, I want to do validation of datafiles. Remember the different steps in this proces:
+     *
+     * determine the type
+     * copy DataFile To Process Directory
+     * read Headers()
+     * read Translations
+     * read through file and process
+     * return errors
      */
     public static void main(String[] args) {
 
-        //checking a datafile for errors
         ValidationService validatorService = new ValidationService();
         FileValidatorService fileValidatorService = new FileValidatorService();
 
@@ -26,8 +31,7 @@ public class ClientObject {
 
         FileOperations fileOperations = new FileOperations();
 
-        //Since this process is not longer encapsulated, a client also needs to know the steps of the process.
-        DataFileType type = fileValidatorService.determineType(Paths.get("/processqueue/datafiles/"));
+        DataFileType type = fileValidatorService.determineType(Paths.get("/processqueue/datafiles/2019-Sales.csv"));
 
         Path dataFileInProcessing =
             fileOperations.copyFile(Paths.get(args[1]), Configuration.getProcessingDirectory());

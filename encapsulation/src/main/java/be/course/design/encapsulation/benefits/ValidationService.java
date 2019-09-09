@@ -10,15 +10,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-
-/**
- * The clou of this example:
- *
- * Suppose that that situation has changed: we no longer use header files and translation files, because we can get
- * all of that information one go by using a webservice. If that would be so, we would need to change the validation service,
- * the filevalidationservice (change of signature and maybe let it make the call) and the client, which in this case needs to
- * know the paths of the header and translation files.
- */
 public class ValidationService {
 
     private FileValidatorService fileValidator;
