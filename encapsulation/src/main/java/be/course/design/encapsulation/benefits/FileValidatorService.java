@@ -9,9 +9,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
-/**
- * This is bad encapsulation... It could have been worse if some of the logic was in other files.
- */
 public class FileValidatorService {
 
     public DataFileType determineType(Path fileToProcess) {
