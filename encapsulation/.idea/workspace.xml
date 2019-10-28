@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe26511-0176-49cd-998a-b33cbf60be1c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/clients/FileHeaderReporting.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/clients/OtherClientObject.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/FileValidatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/FileValidatorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/MetaData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/MetaData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" afterDir="false" />
@@ -322,7 +324,7 @@
       <workItem from="1570271944821" duration="1466000" />
       <workItem from="1570549426035" duration="1260000" />
       <workItem from="1571917135237" duration="7015000" />
-      <workItem from="1572270039837" duration="3711000" />
+      <workItem from="1572270039837" duration="6598000" />
     </task>
     <servers />
   </component>
