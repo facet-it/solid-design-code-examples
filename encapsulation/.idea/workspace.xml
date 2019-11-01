@@ -2,15 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe26511-0176-49cd-998a-b33cbf60be1c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/test/be/course/design/encapsulation/benefits/ValidationServiceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/test/be/course/design/encapsulation/benefits/FileValidatorServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/encapsulation.iml" beforeDir="false" afterPath="$PROJECT_DIR$/encapsulation.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" afterDir="false" />
@@ -55,6 +51,7 @@
         <option value="Enum" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -83,7 +80,8 @@
     <property name="SearchEverywhereHistoryKey" value="Object&#9;FILE&#9;jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_112.jdk/Contents/Home/src.zip!/java/lang/Object.java" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
     <property name="full.screen.before.presentation.mode" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -355,7 +353,7 @@
       <workItem from="1570549426035" duration="1260000" />
       <workItem from="1571917135237" duration="7015000" />
       <workItem from="1572270039837" duration="8458000" />
-      <workItem from="1572605075133" duration="1332000" />
+      <workItem from="1572605075133" duration="2202000" />
     </task>
     <servers />
   </component>
