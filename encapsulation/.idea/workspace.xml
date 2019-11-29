@@ -4,7 +4,8 @@
     <list default="true" id="8fe26511-0176-49cd-998a-b33cbf60be1c" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/be/course/design/encapsulation/benefits/ValidationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/be/course/design/encapsulation/benefits/ValidationServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" afterDir="false" />
@@ -115,7 +116,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ValidationServiceTest.testValidationService">
+  <component name="RunManager" selected="JUnit.FileValidatorServiceTest.testFileValidatorService">
     <configuration default="true" type="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <method v="2">
@@ -207,6 +208,23 @@
       <setting name="depsClasspath" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="FileValidatorServiceTest.testFileValidatorService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="encapsulation" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="be.course.design.encapsulation.benefits.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="be.course.design.encapsulation.benefits" />
+      <option name="MAIN_CLASS_NAME" value="be.course.design.encapsulation.benefits.FileValidatorServiceTest" />
+      <option name="METHOD_NAME" value="testFileValidatorService" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ValidationServiceTest.testValidationService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="encapsulation" />
       <extension name="coverage">
@@ -297,9 +315,11 @@
       <item itemvalue="Application.Application" />
       <item itemvalue="Application.Client" />
       <item itemvalue="JUnit.ValidationServiceTest.testValidationService" />
+      <item itemvalue="JUnit.FileValidatorServiceTest.testFileValidatorService" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.FileValidatorServiceTest.testFileValidatorService" />
         <item itemvalue="JUnit.ValidationServiceTest.testValidationService" />
         <item itemvalue="Application.Client" />
         <item itemvalue="Application.Application" />
@@ -351,7 +371,9 @@
       <workItem from="1570549426035" duration="1260000" />
       <workItem from="1571917135237" duration="7015000" />
       <workItem from="1572270039837" duration="8458000" />
-      <workItem from="1572605075133" duration="2241000" />
+      <workItem from="1572605075133" duration="3062000" />
+      <workItem from="1573988213789" duration="543000" />
+      <workItem from="1575037615869" duration="379000" />
     </task>
     <servers />
   </component>
