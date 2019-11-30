@@ -24,7 +24,7 @@ public class ClientObject {
      */
     public static void main(String[] args) {
 
-        //Instantiating all needed classes
+        //Instantiating all needed classes. For such a simple task, quite a lot of dependencies.
         ValidationService validatorService = new ValidationService();
         FileValidatorService fileValidatorService = new FileValidatorService();
         validatorService.setFileValidator(fileValidatorService);
