@@ -6,7 +6,7 @@ public class Application {
 
 
     public static void main(String[] args) {
-        DirectoryPollingComponent polling = new DirectoryPollingComponent("/Users/nicholasocket/Documents/workspace/test");
+        DirectoryPollingComponent polling = new DirectoryPollingComponent("workspace/test");
         polling.start();
 
         ValidationComponent component = new ValidationComponent(Paths.get("somepath"), ",");

@@ -5,7 +5,9 @@
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/be/course/design/encapsulation/benefits/ValidationServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/be/course/design/encapsulation/benefits/ValidationServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/ValidationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/clients/ClientObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/clients/ClientObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/filecheck/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/filecheck/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" afterDir="false" />
@@ -373,7 +375,8 @@
       <workItem from="1572270039837" duration="8458000" />
       <workItem from="1572605075133" duration="3062000" />
       <workItem from="1573988213789" duration="543000" />
-      <workItem from="1575037615869" duration="379000" />
+      <workItem from="1575037615869" duration="3617000" />
+      <workItem from="1575551968783" duration="1023000" />
     </task>
     <servers />
   </component>
