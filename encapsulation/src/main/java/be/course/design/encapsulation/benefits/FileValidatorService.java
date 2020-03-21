@@ -23,6 +23,11 @@ public class FileValidatorService {
         }
     }
 
+    private MetaData getMetaDataFor(String type) {
+        WebServiceClient client = new WebServiceClient();
+        return client.getMetaDataFor(type);
+    }
+
     public List<String> processFile(Path dataFileInProcessing,
                                     String[] currentHeaders,
                                     Map<String, Map<String, String>> currentTranslations, String delimiter) {
