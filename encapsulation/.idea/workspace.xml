@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8fe26511-0176-49cd-998a-b33cbf60be1c" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/clients/TranslationsCheckup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../abstraction-examples/src/main/java/be/course/design/abstraction/examples/thing/Person.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/FileValidatorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/be/course/design/encapsulation/benefits/FileValidatorService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../inheritance/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/badexample/Checkout.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/../polymorphism/src/main/java/be/course/design/polymorphism/benefits/App.java" afterDir="false" />
@@ -49,8 +49,8 @@
         <option value="Interface" />
         <option value="Enum" />
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -382,7 +382,7 @@
       <workItem from="1577526057310" duration="3018000" />
       <workItem from="1578050836300" duration="1167000" />
       <workItem from="1578396410355" duration="1638000" />
-      <workItem from="1584799989732" duration="898000" />
+      <workItem from="1584799989732" duration="2279000" />
     </task>
     <servers />
   </component>
