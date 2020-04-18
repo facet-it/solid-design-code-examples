@@ -26,7 +26,7 @@ public class Chef {
         for(int i = 20; i > 0; i--) {
             Order order = orderInput.getNextOrder();
 
-            for(GeneralDish dish : order.getDishes()) {
+            for(Object dish : order.getDishes()) {
                 if(dish instanceof Fries) {
                     Fries fries = (Fries) dish;
                     List<String> ingredients = fries.getIngredients();

@@ -3,8 +3,8 @@ package be.course.design.polymorphism.goodexample;
 import java.util.List;
 
 /**
- * This is the client, the user of the VAT calculations. As you can see, in the 
- * signature of the method, we expect an object of the type VatCalculator. This client
+ * This is the businesslogic, the user of the VAT calculations. As you can see, in the
+ * signature of the method, we expect an object of the type VatCalculator. This businesslogic
  * is confident that there will be a method calculate() which needs a List of
  * products on the VatCalculator object, because it is so defined by contract, 
  * which is represented by the interface 'VatCalculator'. 
@@ -12,7 +12,7 @@ import java.util.List;
  * This is great, because this Checkout class is only interested in result. It
  * does not want to know about the different ways of doing VAT calculations. More
  * so, if there all of a sudden is a new market with its own rules, this class or 
- * client does not even have to change in order to use new functionality.
+ * businesslogic does not even have to change in order to use new functionality.
  */
 class Checkout {
     

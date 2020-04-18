@@ -3,7 +3,7 @@ package be.course.design.polymorphism.benefits.implementations.good;
 import java.util.LinkedList;
 import java.util.List;
 
-import be.course.design.polymorphism.benefits.businesslogic.Dish;
+import be.course.design.polymorphism.benefits.businesslogic.good.Dish;
 
 public class Fries implements Dish {
 

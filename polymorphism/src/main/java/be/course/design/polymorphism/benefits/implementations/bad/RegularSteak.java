@@ -18,7 +18,7 @@ public class RegularSteak {
         return (String[]) ingredients.toArray();
     }
 
-    public void bakeRare() {
+    public void bakeRare(String rareness) {
         try{
             System.out.println("Barely put it in the pan");
             Thread.sleep(1000);

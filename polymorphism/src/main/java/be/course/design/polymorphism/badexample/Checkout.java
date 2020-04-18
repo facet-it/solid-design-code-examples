@@ -3,9 +3,9 @@ package be.course.design.polymorphism.badexample;
 import java.util.List;
 
 /**
- * This is another client in need of VAT calculations. Unfortunately, there is 
+ * This is another businesslogic in need of VAT calculations. Unfortunately, there is
  * no uniform way of using these calculations. The developers of the different 
- * vat calculations have no contract to uphold, so the client code needs some
+ * vat calculations have no contract to uphold, so the businesslogic code needs some
  * sort of a check to know which VAT system to use. If there is a new market with
  * a new VAT system, this class will also have to chance. And the changes can be
  * pretty bad. 
