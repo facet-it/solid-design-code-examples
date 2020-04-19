@@ -41,7 +41,7 @@ public class Chef {
                     String[] ingredients = steak.getIngredients();
 
                     if(haveAllIngredients(Arrays.asList(ingredients))) {
-                        steak.bakeRare();
+                        steak.bakeRare("rare");
                     }
                 }
             }
