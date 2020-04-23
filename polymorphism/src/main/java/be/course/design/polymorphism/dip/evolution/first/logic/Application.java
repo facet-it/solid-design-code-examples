@@ -1,6 +1,4 @@
-package be.course.design.polymorphism.dip;
-
-import be.course.design.polymorphism.dip.evolution.first.logic.InputTransformer;
+package be.course.design.polymorphism.dip.evolution.first.logic;
 
 public class Application {
 
@@ -8,7 +6,6 @@ public class Application {
 
         InputTransformer transformer = new InputTransformer();
         transformer.start("$$$$$");
-
     }
 
 }

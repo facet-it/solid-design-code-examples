@@ -20,13 +20,46 @@ import java.util.Scanner;
  */
 public class InputTransformerV2 {
 
-    public void start(String linePrefix) {
+    public static final int PREFIX_ONLY = 1;
+    public static final int SUFFIX_ONLY = 2;
+    public static final int BOTH = 3;
+
+    public void start(String linePrefix, String suffix, int action) {
 
         Scanner consoleInput = new Scanner(System.in);
         String input = consoleInput.nextLine();
 
-        while(! StandardCommand.STOP.equals(input)) {
-            System.out.println(linePrefix + "-" + input);
+        while (!StandardCommand.STOP.equals(input)) {
+
+            if (action == PREFIX_ONLY) {
+                if (linePrefix == null || linePrefix == "") {
+                    System.out.println("There is no line prefix, cannot transform your input!");
+                }
+                else {
+                    System.out.println(linePrefix + "-" + input);
+                }
+            }
+
+            if (action == SUFFIX_ONLY) {
+               if (suffix == null || suffix.equals("")) {
+                   System.out.println("There is no suffix, cannot transform your input");
+               }
+               else {
+                   System.out.println(input + "-" + suffix);
+               }
+            }
+
+            if(action == BOTH) {
+                if (linePrefix == null || linePrefix == "") {
+                    System.out.println("There is no line prefix, cannot transform your input!");
+                }
+                else if (suffix == null || suffix.equals("")) {
+                    System.out.println("There is no suffix, cannot transform your input");
+                }
+                else {
+                    System.out.println(linePrefix + "-" + input + "-" + suffix);
+                }
+            }
 
             input = consoleInput.nextLine();
         }
