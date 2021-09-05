@@ -4,7 +4,7 @@ import java.io.File;
 import java.util.List;
 import java.util.Map;
 
-public class FileValidation {
+public class ValidationProcess {
 
   private HeaderInformation headerInformation;
   private ValueInformation valueInformation;

@@ -8,6 +8,7 @@ public class FileValidationProcess {
 
   private static final String DATA_DIRECTORY = "/imports/data";
   private DataImportRepository dataImportRepository;
+  private ValidationProcess validationProcess;
 
   public void validateFile(String fileName) {
 
@@ -17,7 +18,10 @@ public class FileValidationProcess {
     // Step 2: Create the status trace
     DataImport dataImport = createModel(fileName);
     dataImportRepository.save(dataImport);
+
     // Step 3: Validate the actual file
+    String[] nameParts = fileName.split("_");
+    validationProcess.validateFile(file, nameParts[0], nameParts[1]);
 
     // Step 4: Update status trace
 

@@ -2,3 +2,6 @@
 /polymorphism/target/
 /inheritance/target/
 /SRP/target/
+
+.idea
+.idea/*
